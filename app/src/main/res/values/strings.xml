@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="MODEL">list</string>
+    <string name="position">position</string>
+</resources>
