@@ -12,11 +12,13 @@ public class Model {
     String name;
     int level;
     STATE state = STATE.CLOSED;
+    String designation;
     ArrayList<Model> models = new ArrayList<>();
 
-    public Model(String name, int level) {
+    public Model(String name, int level , String designation) {
         this.name = name;
         this.level = level;
+        this.designation = designation;
     }
 
 }
