@@ -45,10 +45,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         switch (model.state) {
 
             case CLOSED:
-                holder.imgArrow.setImageResource(R.drawable.svg_arrow_right);
+                holder.imgArrow.setImageResource(R.drawable.svg_arrow_right_filled);
                 break;
             case OPENED:
-                holder.imgArrow.setImageResource(R.drawable.svg_arrow_down);
+                holder.imgArrow.setImageResource(R.drawable.svg_arrow_down_filled);
                 break;
         }
 
