@@ -75,7 +75,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         modelsAll.addAll(position + 1, rootModel.models);
                         notifyItemRangeInserted(position + 1, rootModel.models.size());
                         notifyItemRangeChanged(position + rootModel.models.size(), modelsAll.size() - (position + rootModel.models.size()));
-                        notifyItemChanged(position);
+                        notifyItemRangeChanged(position, modelsAll.size() - position);
                         rootModel.state = Model.STATE.OPENED;
                         break;
 
@@ -85,7 +85,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         int end = modelsAll.size();
                         for (int i = start; i < modelsAll.size(); i++) {
                             Model model1 = modelsAll.get(i);
-                            if (rootModel.level == model1.level) {
+                            if (model1.level <= rootModel.level) {
                                 end = i;
                                 break;
                             } else {
@@ -99,7 +99,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                             modelsAll.subList(start, end).clear();
                             notifyItemRangeRemoved(start, end - start);
                             notifyItemRangeChanged(start, end - start);
-                            notifyItemChanged(position);
+                            notifyItemRangeChanged(position, modelsAll.size() - position);
                         }
 
                         rootModel.state = Model.STATE.CLOSED;

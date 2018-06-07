@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
         Model model1_2_3 = new Model("Taisha Dragoo", 2,"Food Service Manager");
         Model model1_2_4 = new Model("Abbey Ballance", 2,"Medical Services Manager");
         model1_2.models.add(model1_2_1);
-        model1_2.models.add(model1_2_2);
-        model1_2.models.add(model1_2_3);
-        model1_2.models.add(model1_2_4);
+//        model1_2.models.add(model1_2_2);
+//        model1_2.models.add(model1_2_3);
+//        model1_2.models.add(model1_2_4);
 
 //        model1_2.models.add(model1_2_1);
 //        model1_2.models.add(model1_2_2);
